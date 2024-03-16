@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style.css">
+    <script src="./Scrip.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="game-title">✂️ Piedra,Papel o Tijera 🪨</h1>
+    </header>
+    <main>
+        <section class="main-ring">
+            <div class="match-area">
+                <picture class="player">
+                    <img src="./Assets/icons8-puño-100.png" alt="Play of player"/>
+                </picture>
+                <h3>VS</h3>
+                <picture class="machine">
+                    <img src="./Assets/icons8-hand-peace-100.png" alt="Play of machine">
+                </picture>
+            </div>
+            <button>Jugar</button>
+            <h3 class="game-result">Has Ganado!</h3>
+            <p class="scoreboard"><span>1</span> - <span>0</span></p>
+        </section>
+
+        <section class="powers">
+            <p>Elije tu movimiento</p>
+            <picture>
+                <input id="piedra" type="image" src="./Assets/icons8-puño-100.png" alt="piedra">
+                <input id="tijera" type="image" src="./Assets/icons8-hand-peace-100.png" alt="tijera">
+                <input id="papel" type="image" src="./Assets/icons8-hand-30.png" alt="papel">
+            </picture>
+        </section>
+    </main>
+</body>
+</html>

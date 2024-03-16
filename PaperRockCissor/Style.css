@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    font-family: "Inconsolata", monospace;
+}
+
+header {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 10vb;
+    padding: 20px;
+}
+
+header .game-title {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    background: rgb(2,0,36);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-ring {
+    width: 90%;
+    height: 90%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./Assets/RingDeBox.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-ring .match-area {
+    display: grid;
+    grid-template-columns: 2fr 80px 2fr;
+    place-items: center;
+}
+
+section .match-area picture {
+    width:100%;
+    height: 100%;
+}
+
+.match-area picture img {
+    width: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.match-area h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main-ring .game-result {
+    font-size: 2.4rem;
+}
+
+.main-ring .scoreboard {
+    font-size: 1.6rem;
+    font-family: "Sixtyfour", sans-serif !important;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.main-ring button {
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    background: #4169E1;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    margin: 20px 0;
+}
+
+.powers {
+    width: 350px;
+    height: auto;
+    border: 2px solid black;
+    padding: 10px;
+    /* display: none; */
+}
+.powers p {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 8px;
+}
+.powers picture {
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 660px) {
+    header .game-title {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+}
