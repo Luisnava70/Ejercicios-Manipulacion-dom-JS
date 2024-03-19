@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Style.css">
-    <script src="./Scrip.js"></script>
+    
 </head>
 <body>
     <header>
@@ -15,26 +15,28 @@
         <section class="main-ring">
             <div class="match-area">
                 <picture class="player">
-                    <img src="./Assets/icons8-puño-100.png" alt="Play of player"/>
+                    <!-- <img src="./Assets/icons8-puño-100.png" alt="Play of player"/> -->
                 </picture>
                 <h3>VS</h3>
                 <picture class="machine">
                     <img src="./Assets/icons8-hand-peace-100.png" alt="Play of machine">
                 </picture>
             </div>
-            <button>Jugar</button>
+            <button class="start-game">Jugar</button>
             <h3 class="game-result">Has Ganado!</h3>
-            <p class="scoreboard"><span>1</span> - <span>0</span></p>
+            <p class="scoreboard"><span class="player-score">1</span> - <span class="pc-score">0</span></p>
         </section>
 
-        <section class="powers">
+        <section class="powers inactive">
             <p>Elije tu movimiento</p>
-            <picture>
-                <input id="piedra" type="image" src="./Assets/icons8-puño-100.png" alt="piedra">
+            <picture class="picture-powers">
+                <!-- <input id="piedra" type="image" src="./Assets/icons8-puño-100.png" alt="piedra">
                 <input id="tijera" type="image" src="./Assets/icons8-hand-peace-100.png" alt="tijera">
-                <input id="papel" type="image" src="./Assets/icons8-hand-30.png" alt="papel">
-            </picture>
+                <input id="papel" type="image" src="./Assets/icons8-hand-30.png" alt="papel"> -->
+            </picture> 
         </section>
     </main>
+
+    <script src="./Scrip.js"></script>
 </body>
 </html>

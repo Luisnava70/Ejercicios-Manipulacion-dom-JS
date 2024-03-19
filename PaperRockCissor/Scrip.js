@@ -55,46 +55,88 @@ while (triunfos < 3 && perdidas < 3) {
     partida(pc,jugador);
 } */
 
+const startGame = document.querySelector('.start-game');
+const mainRing = document.querySelector('.main-ring');
+const powerSecction = document.querySelector('.powers');
+const picturePowers = document.querySelector('.picture-powers');
+const playerPic = document.querySelector('.player');
+const pcSlection = document.querySelector('machine');
+const powerSlectImg = document.createElement('img');
+const powerPcSlect = document.createElement('img');
 
-function iniciarJuego(){
-    const sectionPowers = document.querySelector('.powers'); // Mover la definición de sectionPowers dentro de iniciarJuego()
-    const ring = document.querySelector(".main-ring");
+/* const piedra = document.querySelector('#piedra');
+const tijera = document.querySelector( '#tijera' );
+const papel = document.querySelector( '#papel'); */
+const powersList = [];
+const player = {
+    namePower: ''
+}; 
+const pc = {
+    namePower: ''
+};
 
-    function seleccionPiedra (){
-        console.log("Piedra");
-        sectionPowers.style.display = 'none';
-        ring.style.display = 'flex'
-    }
+powersList.push({
+    name: 'Piedra',
+    img:'./Assets/icons8-puño-100.png'
+});
 
-    function seleccionPapel (){
-        console.log("Papel");
-        sectionPowers.style.display = 'none';
-        ring.style.display = 'flex'
-    }
+powersList.push({
+    name: 'Tijera',
+    img:'./Assets/icons8-hand-peace-100.png'
+});
 
-    function seleccionTijera (){
-        console.log("Tijera");
-        sectionPowers.style.display = 'none';
-        ring.style.display = 'flex'
-    }
+powersList.push({
+    name:'Papel',
+    img:'./Assets/icons8-hand-30.png'
+});
 
-    let piedra = document.getElementById('piedra');
-    let papel = document.getElementById('papel');
-    let tijera = document.getElementById('tijera');
-    piedra.addEventListener('click', seleccionPiedra);
-    papel.addEventListener('click',seleccionPapel);
-    tijera.addEventListener('click',seleccionTijera);
+function choosePower(){
+    mainRing.classList.add('inactive');
+    powerSecction.classList.remove('inactive');
 }
 
-window.addEventListener( 'load', iniciarJuego);
+function aleatorio(min,max){
+    return Math.floor(Math.random()*(max-min+1)+1);
+}
+
+function selectPower(imgPower, powerName) {
+    let randomIndex = aleatorio(0,2);
+    powerSlectImg.src = imgPower;
+    powerSlectImg.alt = "Play of player";
+    playerPic.appendChild(powerSlectImg);
+    const powerSelectName = powerName;
+    player.namePower = powerSelectName;
+    console.log(player);
+    pcPower(randomIndex);
+    console.log(randomIndex);
+}
+
+function renderPowers(powerArr){
+    for(power of powerArr){
+        const powerImg = document.createElement('input');
+        powerImg.type='image';
+        powerImg.src=power.img;
+        powerImg.name = power.name;
+        powerSecction.appendChild(picturePowers);
+        picturePowers.appendChild(powerImg);
+        // Agregar el evento
+        powerImg.addEventListener('click', function (){
+            const selectedPower = this.getAttribute('name');
+            const imgPower = this.src; 
+            console.log(`Escogiste ${selectedPower}`);
+            powerSecction.classList.add('inactive');
+            mainRing.classList.remove('inactive');
+            //le pasamos los parametros de la imagen y el nombre
+            selectPower(imgPower,selectedPower);
+        });
+    }
+}
 
 
 
+function pcPower(powerNum){
+    
+}
 
-window.addEventListener( 'load', iniciarJuego);
-
-
-
-
-
-
+renderPowers(powersList);
+startGame.addEventListener('click', choosePower);
