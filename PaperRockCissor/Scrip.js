@@ -60,20 +60,26 @@ const mainRing = document.querySelector('.main-ring');
 const powerSecction = document.querySelector('.powers');
 const picturePowers = document.querySelector('.picture-powers');
 const playerPic = document.querySelector('.player');
-const pcSlection = document.querySelector('machine');
+const pcSlection = document.querySelector('.machine');
+const resulMatch = document.querySelector('.game-result');
+const playerScore = document.querySelector('.player-score');
+const pcScore = document.querySelector('.pc-score')
 const powerSlectImg = document.createElement('img');
 const powerPcSlect = document.createElement('img');
+
 
 /* const piedra = document.querySelector('#piedra');
 const tijera = document.querySelector( '#tijera' );
 const papel = document.querySelector( '#papel'); */
 const powersList = [];
 const player = {
-    namePower: ''
+    namePower: '',
 }; 
 const pc = {
-    namePower: ''
+    namePower: '',
 };
+let pcPoints = 0;
+let playerPoints = 0;
 
 powersList.push({
     name: 'Piedra',
@@ -95,20 +101,24 @@ function choosePower(){
     powerSecction.classList.remove('inactive');
 }
 
-function aleatorio(min,max){
-    return Math.floor(Math.random()*(max-min+1)+1);
+function aleatorio(){
+    var randomNumber = Math.random();
+    var randomNumberInRange = Math.floor(randomNumber * 3);
+    return randomNumberInRange;
 }
 
 function selectPower(imgPower, powerName) {
-    let randomIndex = aleatorio(0,2);
+    let randomIndex = aleatorio();
     powerSlectImg.src = imgPower;
     powerSlectImg.alt = "Play of player";
     playerPic.appendChild(powerSlectImg);
     const powerSelectName = powerName;
     player.namePower = powerSelectName;
-    console.log(player);
     pcPower(randomIndex);
-    console.log(randomIndex);
+    console.log(player.namePower == pc.namePower);
+    whoWin(player,pc);
+    /*  console.log(player);
+    console.log(randomIndex); */
 }
 
 function renderPowers(powerArr){
@@ -132,10 +142,41 @@ function renderPowers(powerArr){
     }
 }
 
-
-
 function pcPower(powerNum){
-    
+    const powerPc = powersList[powerNum];
+    powerPcSlect.src=powerPc.img;
+    pcSlection.appendChild(powerPcSlect);
+    pc.namePower =  powerPc.name;
+    /* console.log(`Poder de la pc ${powerPc.name}`); */
+    console.log("poder de la pc " + pc.namePower);
+    return pc.namePower
+}
+
+function whoWin(player,pc){
+    if(player.namePower == pc.namePower){
+        console.log("Empate");
+        resulMatch.innerHTML="¡Empataron!";
+    }else if(player.namePower == 'Piedra' && pc.namePower=='Tijera'){
+        console.log("Gano el player");
+        resulMatch.innerHTML="¡Has ganado!";
+        playerPoints++;
+        playerScore.innerHTML=playerPoints;
+    }else if(player.namePower == 'Tijera' && pc.namePower=='Papel'){
+        console.log("Gano el player");
+        resulMatch.innerHTML="¡Has ganado!";
+        playerPoints++;
+        playerScore.innerHTML=playerPoints;
+    }else if(player.namePower == 'Papel' && pc.namePower=='Piedra'){
+        console.log("Gano el player");
+        resulMatch.innerHTML="¡Has ganado!";
+        playerPoints++;
+        playerScore.innerHTML=playerPoints;
+    }else{
+        console.log("Gano la pc");
+        resulMatch.innerHTML="¡La Pc Ganó!";
+        pcPoints++;
+        pcScore.innerHTML=pcPoints;
+    }
 }
 
 renderPowers(powersList);
