@@ -1,0 +1,169 @@
+:root {
+    --mathematical-operators: #F27F04;
+    --matematical-functions: #797979;
+    --number: #FFF;
+    --boxes: #161616;
+    --light-number: #E4E4E4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 62.5%;
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.title-container h1 {
+    color: var(--number);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+main {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-calculator {
+    width: 80%;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    margin: 15px 0px;
+    padding: 10px;
+}
+
+.operations {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--light-number);
+    margin-bottom: 5px;
+}
+
+.result {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--number);
+}
+
+.result::before{
+    content: "= ";
+}
+
+.buttons-container {
+    width: 80%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(7,1fr) ;
+    gap: 6px;
+    place-content: center;
+}
+
+.box {
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--boxes);
+    border-color: gray;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box img {
+    width: 20px;
+    height: 20px;
+}
+
+.number {
+    color: var(--number);
+}
+
+.matematical-operators {
+    color: var(--mathematical-operators);
+    font-size: 1.4rem;
+}
+
+.matematical-operators svg {
+    fill: var(--mathematical-operators);
+}
+
+#equals {
+    background-color: var(--mathematical-operators);
+    color: var(--number);
+}
+
+.backspace {
+    fill: var(--mathematical-operators);
+}
+
+#squared-number {
+    position: relative;
+}
+
+#squared-number .power {
+    position: absolute;
+    font-size: 0.6rem;
+    top: 5px;
+    right: 24px;
+}
+
+.matematical-function {
+    color: var(--matematical-functions);
+}
+
+/* estilos para pantallas menores a 490px */
+@media (max-width: 490px){
+    .buttons-container{
+        grid-template-columns: repeat(7,45px) ;
+    }
+}
+
+
+@media (max-width: 340px){
+    .buttons-container{
+        grid-template-columns: repeat(7,35px) ;
+    }
+
+    .box {
+        font-size: 0.8rem;
+    }
+
+    main {
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .box img {
+        width: 10px;
+        height: 10px;
+    }
+}
