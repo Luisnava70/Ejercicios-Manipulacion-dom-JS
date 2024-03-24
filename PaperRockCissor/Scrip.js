@@ -1,59 +1,3 @@
-/* function aleatorio(min,max){
-    return Math.floor(Math.random()*(max-min+1)+1);
-}
-
-function eleccion(jugada){
-    let result = "";
-    if(jugada == 1){
-        result = "🪨";
-    }else if(jugada == 2){
-        result = "📄";
-    }else if(jugada == 3){
-        result = "✂️";
-    }
-
-    return result;
-}
-
-function  partida(pc, jugador) {
-    // 1 = piedra, 2 = papel, 3 = tijera
-    if (pc == jugador){
-        alert("Empate");
-    }else if(jugador == 1 && pc == 3) {
-        alert("Has ganado esta ronda!");
-        triunfos++;
-    }else if(jugador == 2 && pc == 1){
-        alert("Has ganado esta ronda!");
-        triunfos++;
-    }else if(jugador == 3 && pc == 2){
-        alert("Has ganado esta ronda!");
-        triunfos++;
-    }else {
-        alert("Pc gano!")
-        perdidas++;
-    }
-
-    console.log(triunfos + " - " + perdidas);
-
-}
-    
-
-// 1 = piedra, 2 = papel, 3 = tijera
-let jugador = 0;
-let pc = 0;
-let triunfos = 0;
-let perdidas = 0;
-
-while (triunfos < 3 && perdidas < 3) {
-    pc = aleatorio(1,3);
-    jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera");
-    if(jugador == ""){
-        jugador = 1;
-    }
-    alert(eleccion(pc) + ' vs ' + eleccion(jugador));
-    //Combate
-    partida(pc,jugador);
-} */
 
 const startGame = document.querySelector('.start-game');
 const mainRing = document.querySelector('.main-ring');
@@ -147,8 +91,6 @@ function pcPower(powerNum){
     powerPcSlect.src=powerPc.img;
     pcSlection.appendChild(powerPcSlect);
     pc.namePower =  powerPc.name;
-    /* console.log(`Poder de la pc ${powerPc.name}`); */
-    console.log("poder de la pc " + pc.namePower);
     return pc.namePower
 }
 

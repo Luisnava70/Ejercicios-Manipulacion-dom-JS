@@ -15,46 +15,48 @@
     </header>
     <main>
         <section class="display-calculator">
-            <p class="operations">(5+2)+(8*96)/25</p>
-            <p class="result">37.72</p>
+            <p class="operations"></p>
+            <p class="result"></p>
         </section>
         <section class="buttons-container">
             <button class="box matematical-function">deg</button>
             <button class="box matematical-function">(</button>
             <button class="box matematical-function">)</button>
-            <button class="box matematical-operators">AC</button>
-            <button class="box matematical-operators"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M360-200q-20 0-37.5-9T294-234L120-480l174-246q11-16 28.5-25t37.5-9h400q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H360Zm400-80v-400 400Zm-400 0h400v-400H360L218-480l142 200Zm96-40 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Z"/></svg></button>
+            <button class="box clean-display">AC</button>
+            <button class="box delete-number"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M360-200q-20 0-37.5-9T294-234L120-480l174-246q11-16 28.5-25t37.5-9h400q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H360Zm400-80v-400 400Zm-400 0h400v-400H360L218-480l142 200Zm96-40 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Z"/></svg></button>
             <button class="box matematical-operators">%</button>
-            <button class="box matematical-operators" id="division-sign">÷</button>
+            <button class="box matematical-operators" id="division-sign">/</button>
             <button class="box matematical-function">2nd</button>
             <button class="box matematical-function">1/x</button>
             <button class="box matematical-function"><img src="./Assets/PI.png" alt="PI" class="PI"></button>
-            <button class="box number">7</button>
-            <button class="box number">8</button>
-            <button class="box number">9</button>
-            <button class="box matematical-operators">X</button>
+            <button class="box number" value="7">7</button>
+            <button class="box number" value="8">8</button>
+            <button class="box number" value="9">9</button>
+            <button class="box matematical-operators" id="by-button">*</button>
             <button class="box matematical-function">sin</button>
             <button class="box matematical-function">tan</button>
             <button class="box matematical-function">cos</button>
-            <button class="box number">4</button>
-            <button class="box number">5</button>
-            <button class="box number">6</button>
+            <button class="box number" value="4">4</button>
+            <button class="box number" value="5">5</button>
+            <button class="box number" value="6">6</button>
             <button class="box matematical-operators">-</button>
             <button class="box matematical-function">x!</button>
             <button class="box"><img src="./Assets/icons8-raíz-cuadrada-50.png" alt="square root"></button>
             <button class="box matematical-function" id="squared-number">X <p class="power">y</p></p>
-            <button class="box number">1</button>
-            <button class="box number">2</button>
-            <button class="box number">3</button>
+            <button class="box number" value="1">1</button>
+            <button class="box number" value="2">2</button>
+            <button class="box number" value="3">3</button>
             <button class="box matematical-operators">+</button>
             <button class="box matematical-function">lg</button>
             <button class="box matematical-function">ln</button>
             <button class="box matematical-function">e</button>
-            <button class="box number">00</button>
-            <button class="box number">0</button>
-            <button class="box number">.</button>
+            <button class="box number" value="00">00</button>
+            <button class="box number" value="0">0</button>
+            <button class="box number" value=".">.</button>
             <button class="box " id="equals">=</button>
         </section>
     </main>
+
+    <script src="./scrip.js"></script>
 </body>
 </html>
