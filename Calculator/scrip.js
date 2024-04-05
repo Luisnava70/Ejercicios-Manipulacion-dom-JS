@@ -9,8 +9,6 @@ const resultDisplay = document.querySelector('.result')
 
 function addNumber(event){
     const numberClicked = event.target.textContent;
-    console.log("Número clicado:", numberClicked);
-    
     // Agregamos los números al párrafo con la clase .operations
     operationsDisplay.forEach(display => {
         display.innerText += numberClicked;
@@ -28,8 +26,12 @@ function addOperators(event) {
 function performOperation(){
     operationsDisplay.forEach(display => {
         const content = display.innerText; // O display.textContent 
+        try{
+            resultDisplay.innerHTML = `= ${eval(content)}` ;
+        }catch(error){
+            resultDisplay.innerHTML = `ERROR!` ;
+        }
         
-        resultDisplay.innerHTML = `= ${eval(content)}` ;
     });
 }
 

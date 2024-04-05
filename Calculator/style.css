@@ -75,7 +75,7 @@ main {
     width: 80%;
     height: 50vh;
     display: grid;
-    grid-template-columns: repeat(7,1fr) ;
+    grid-template-columns: repeat(4,1fr) ;
     gap: 6px;
     place-content: center;
     position: relative;
@@ -99,6 +99,10 @@ main {
     align-items: center;
     border: none;
     cursor: pointer;
+}
+
+.box:active{
+    background: var(--matematical-functions);
 }
 
 
@@ -154,9 +158,11 @@ main {
 
 @media (max-width: 490px){
     .buttons-container{
-        grid-template-columns: repeat(7,40px) ;
+        grid-template-columns: repeat(4,0.6fr) ;
         gap: 20px 15px;
         width: 100%;
+        padding: 14px;
+        margin-bottom: 45px
     }
 
     .box {
