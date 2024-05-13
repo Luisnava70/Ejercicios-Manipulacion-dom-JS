@@ -57,7 +57,6 @@ function increaseAge(){
     inputRange.addEventListener('input', ()=> {
     clientHeight.textContent = inputRange.value + " cm";
     height = Number(inputRange.value);
-    console.log(height);
     });
 
     function selectStatus(height,weight){
@@ -105,7 +104,7 @@ function backToCalculateBmi(){
 }
 
 
-console.log(height,weight);
+
 
 backToCalculate.addEventListener('click',backToCalculateBmi);
 btnFemmale.addEventListener('click',selectGender);

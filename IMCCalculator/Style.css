@@ -181,6 +181,7 @@ main {
     font-size: 2.8rem;
     border: none;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .inactive {
