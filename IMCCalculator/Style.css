@@ -1,0 +1,188 @@
+:root {
+    --background-color: #2C3E50;
+    --box-color: #566573;
+    --button-color: #8E44AD;
+    --number-color: #e7e7e7;
+    --text-color: #d6d3d3b9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+main {
+    display: grid;
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.choose-gender {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.female,.male  {
+    width: 100px;
+    height: 100px;
+    background-color: var(--box-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.female,.male {
+    cursor: pointer;
+}
+
+.genderSelected{
+    background-color: #6e7c8a;
+}
+
+.female picture,.male picture {
+    width: 100%;
+    height: 100%;
+} 
+
+.female picture img,.male picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.choose-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.choose-height label {
+    color:var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.clients-height{
+    color: var(--number-color);
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+#height {
+    width: 250px;
+}
+
+.min-height {
+    position: absolute;
+    left: 15px;
+    bottom: -15px;
+    font-size: 1.2rem;
+    color: var(--number-color);
+}
+
+.max-height {
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+    font-size: 1.2rem;
+    color: var(--number-color);
+}
+
+.choose-weight-age {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 20px;
+}
+
+.weight, .age{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--box-color);
+    border-radius: 10px;
+}
+
+.weight p, .age p {
+    font-size: 2.4rem;
+    color: var(--number-color);
+    font-weight: bold;
+}
+
+.increase-decreast-weight, .increase-decreast-age {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.increase-age,
+.decreast-age,
+.increase-weight,
+.decreast-weight {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% ;
+    background-color: var(--button-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.calculate-imc {
+    justify-self: center;
+    align-self: flex-end;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 2.8rem;
+    border: none;
+    margin-top: 15px;
+}
+
+.inactive {
+    display: none;
+}

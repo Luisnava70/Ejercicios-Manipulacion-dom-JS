@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC Calculator</title>
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="./styleRessult.css">
+</head>
+<body>
+    <header>
+        <h1>IMC Calculator</h1>
+    </header>
+    <main class="attribute-view">
+        <section class="choose-gender">
+            <div class="female">
+                <picture>
+                    <img src="./assets/icons8-female-100.png" alt="female">
+                </picture>
+            </div>
+            <div class="male">
+                <picture>
+                    <img src="./assets/icons8-male-100.png" alt="male">
+                </picture>
+            </div>
+        </section>
+        <section class="choose-height">
+            <label for="height">Height</label>
+            <output class="clients-height" for="height"></output>
+            <input type="range" name="height" id="height" min="40" max="230" value="135">
+            <p class="min-height">40</p>
+            <p class="max-height">230</p>
+        </section>
+        <section class="choose-weight-age">
+            <div class="weight">
+                <h3>Weight</h3>
+                <p><span class="clients-weight">30</span> kl</p>
+                <div class="increase-decreast-weight">
+                    <button class="decreast-weight">-</button>
+                    <button class="increase-weight">+</button>
+                </div>
+            </div>
+            <div class="age">
+                <h3>Age</h3>
+                <p><span class="clients-age">20</span></p>
+                <div class="increase-decreast-age">
+                    <button class="decreast-age">-</button>
+                    <button class="increase-age">+</button>
+                </div>
+            </div>
+        </section>
+        <button class="calculate-imc">Calculate</button>
+    </main>
+    <main class="view-result inactive">
+        <main>
+            <section class="result">
+                <h3>Your BMI is: </h3>
+                <p class="result-imc"></p>
+                <p class="status-imc"></p>
+            </section>
+            <button class="back-to-calculate">Re-calculate</button>
+        </main>
+    </main>
+    <script  src="./main.js" ></script>
+    <script src="./results.js" ></script>
+</body>
+</html>
